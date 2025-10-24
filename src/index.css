@@ -1,0 +1,200 @@
+/* src/index.css */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Tipografía moderna */
+body {
+  @apply font-sans antialiased;
+  font-family: 'Inter', sans-serif;
+}
+
+/* Estilos globales para tarjetas */
+.card {
+  @apply rounded-xl p-4 bg-white border border-zinc-200 shadow-sm transition-all duration-200 hover:shadow-md;
+}
+
+.card:hover {
+  @apply transform translate-y-[-2px];
+}
+
+/* Estilos para botones */
+.btn {
+  @apply px-4 py-2 rounded-lg font-medium transition-all duration-200;
+}
+
+.btn-primary {
+  @apply bg-blue-600 text-white hover:bg-blue-700;
+}
+
+.btn-secondary {
+  @apply bg-zinc-200 text-zinc-800 hover:bg-zinc-300;
+}
+
+.btn-danger {
+  @apply bg-red-600 text-white hover:bg-red-700;
+}
+
+/* Estilos para inputs */
+.input {
+  @apply px-3 py-2 border border-zinc-300 rounded-lg text-sm focus:outline-none focus:ring-2 focus:ring-blue-300;
+}
+
+/* Estilos para select */
+.select {
+  @apply px-3 py-2 border border-zinc-300 rounded-lg text-sm focus:outline-none focus:ring-2 focus:ring-blue-300;
+}
+
+/* Estilos para texto */
+.text-primary {
+  @apply text-blue-700;
+}
+
+.text-success {
+  @apply text-green-700;
+}
+
+.text-warning {
+  @apply text-yellow-700;
+}
+
+.text-danger {
+  @apply text-red-700;
+}
+
+/* Estilos para estado de cuota */
+.status-pagado {
+  @apply bg-green-100 text-green-800 border-green-300;
+}
+
+.status-pendiente {
+  @apply bg-yellow-100 text-yellow-800 border-yellow-300;
+}
+
+/* Estilos para encabezados */
+.h1 {
+  @apply text-2xl font-bold;
+}
+
+.h2 {
+  @apply text-xl font-semibold;
+}
+
+.h3 {
+  @apply text-lg font-medium;
+}
+
+/* Espaciado general */
+.section {
+  @apply mb-6;
+}
+
+/* Fondo de la app */
+.bg-app {
+  @apply bg-zinc-50;
+}
+
+/* Footer */
+.footer {
+  @apply text-xs text-zinc-500 mt-8;
+}
+
+/* Menú lateral */
+.sidebar {
+  @apply hidden md:block col-span-3 lg:col-span-2;
+}
+
+.sidebar .nav-item {
+  @apply flex items-center gap-3 w-full px-4 py-3 rounded-xl text-sm font-medium transition-all duration-200;
+}
+
+.sidebar .nav-item.active {
+  @apply bg-blue-50 text-blue-700 border-l-4 border-blue-500 shadow-sm;
+}
+
+.sidebar .nav-item:hover {
+  @apply bg-blue-50 text-blue-700 border-blue-200;
+}
+
+/* Header */
+.header {
+  @apply sticky top-0 z-40 bg-white/90 backdrop-blur border-b border-zinc-200 shadow-sm;
+}
+
+.header .container {
+  @apply max-w-7xl mx-auto px-4 py-3 flex items-center justify-between;
+}
+
+/* Main content */
+.main {
+  @apply col-span-12 md:col-span-9 lg:col-span-10 space-y-6;
+}
+
+/* Dashboard cards */
+.dashboard-card {
+  @apply rounded-xl p-4 bg-white border border-zinc-200 shadow-sm;
+}
+
+.dashboard-card .title {
+  @apply text-sm font-medium text-zinc-600 mb-1;
+}
+
+.dashboard-card .value {
+  @apply text-2xl font-bold mb-1;
+}
+
+.dashboard-card .hint {
+  @apply text-xs text-zinc-500;
+}
+
+.dashboard-card .icon {
+  @apply h-10 w-10 rounded-full flex items-center justify-center;
+}
+
+/* Actividad reciente */
+.actividad-reciente {
+  @apply rounded-xl p-4 bg-white border border-zinc-200 shadow-sm;
+}
+
+.actividad-reciente .item {
+  @apply flex items-center justify-between py-2 border-b border-zinc-100 last:border-b-0;
+}
+
+.actividad-reciente .status {
+  @apply px-2 py-0.5 text-xs rounded-full border font-medium;
+}
+
+/* Reparto 50/50 */
+.reparto {
+  @apply rounded-xl p-4 bg-white border border-zinc-200 shadow-sm;
+}
+
+.reparto .title {
+  @apply font-bold mb-3;
+}
+
+.reparto .row {
+  @apply flex justify-between mb-1;
+}
+
+.reparto .label {
+  @apply text-zinc-600;
+}
+
+.reparto .value {
+  @apply font-medium;
+}
+
+/* Selector de mes */
+.selector-mes {
+  @apply flex items-center gap-2;
+}
+
+.selector-mes .select {
+  @apply px-3 py-2 border border-zinc-300 rounded-lg text-sm;
+}
+
+/* Botón exportar */
+.btn-exportar {
+  @apply px-4 py-2 rounded-lg bg-blue-600 text-white hover:bg-blue-700 text-sm font-medium transition-transform hover:scale-105;
+}
