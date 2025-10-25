@@ -8,8 +8,17 @@
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet"><link rel="icon" type="image/svg+xml" href="/finanzas-dos-cuotas/vite.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>finanzas-dos-cuotas</title>
-    <script type="module" crossorigin src="/finanzas-dos-cuotas/assets/index-CSCc4soe.js"></script>
-    <link rel="stylesheet" crossorigin href="/finanzas-dos-cuotas/assets/index-vJ_dPyiy.css">
+    <script>
+      (function () {
+        var redirect = sessionStorage.getItem("spa-redirect");
+        if (!redirect) return;
+        sessionStorage.removeItem("spa-redirect");
+        if (redirect === window.location.pathname + window.location.search + window.location.hash) return;
+        window.history.replaceState(null, "", redirect);
+      })();
+    </script>
+    <script type="module" crossorigin src="/finanzas-dos-cuotas/assets/index-CbKxj03g.js"></script>
+    <link rel="stylesheet" crossorigin href="/finanzas-dos-cuotas/assets/index-C8xy0rve.css">
   </head>
   <body>
     <div id="root"></div>

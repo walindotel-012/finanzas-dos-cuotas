@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Redireccionando…</title>
+    <script>
+      (function () {
+        var path = window.location.pathname + window.location.search + window.location.hash;
+        sessionStorage.setItem("spa-redirect", path);
+
+        var segments = window.location.pathname.split("/").filter(Boolean);
+        var basePath = "/";
+        if (segments.length > 1) {
+          basePath = "/" + segments[0] + "/";
+        }
+
+        window.location.replace(basePath);
+      })();
+    </script>
+  </head>
+  <body>
+    <p>Redireccionando…</p>
+  </body>
+</html>
