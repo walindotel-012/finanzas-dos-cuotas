@@ -10,7 +10,7 @@
 
         var segments = window.location.pathname.split("/").filter(Boolean);
         var basePath = "/";
-        if (segments.length > 1) {
+        if (segments.length >= 1) {
           basePath = "/" + segments[0] + "/";
         }
 
